@@ -69,9 +69,9 @@ namespace AreaLibrary
         /// <summary>
         /// Проверяет, является ли треугольник прямоугольным
         /// </summary>
-        /// <param name="eqPrecision">Точность сравнения на равенство: два числа a и b будут считаться равными, если и только если |a - b| < eqPrecision</param>
+        /// <param name="eqPrecision">Точность сравнения на равенство: два числа a и b будут считаться равными, если и только если |a - b| < eqPrecision. По умолчанию равен 1e-10</param>
         /// <returns></returns>
-        public bool IsRight(double eqPrecision)
+        public bool IsRight(double eqPrecision = 1e-10)
         {
             return Math.Abs(minSide * minSide + middleSide * middleSide - maxSide * maxSide) < eqPrecision;
         }
